@@ -52,8 +52,8 @@ if(carrinho) {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/success",
-            "cancel_url": "http://localhost:3000/cancel"
+            "return_url": "https://aglcompany.herokuapp.com/success",
+            "cancel_url": "https://aglcompany.herokuapp.com/cancel"
         },
         "transactions": [{
             "item_list": {
