@@ -25,10 +25,9 @@ module.exports = {
       pool: {
         min: 2,
         max: 10,
-        connectionString: process.env.DATABASE_URL,
+      },
       ssl: {
-       rejectUnauthorized: false
-     }
+        rejectUnauthorized: false
       },
       migrations: {
         directory: './migrations'
