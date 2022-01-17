@@ -88,13 +88,13 @@ if(carrinho) {
 
 
 const success = (req, res) => {
-    
-    console.log(req.query)
-    res.redirect(`http://localhost:4200/success`)
+    const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/success' : 'https://aglcompany.herokuapp.com/success'
+    res.redirect(url)
 }
 
 const cancel = (req, res) => {
-    res.redirect(`http://localhost:4200/cancel`)
+    const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/cancel' : 'https://aglcompany.herokuapp.com/cancel'
+    res.redirect(url)
 }
 
 
