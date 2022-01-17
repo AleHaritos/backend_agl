@@ -6,7 +6,7 @@ exports.up = function(knex) {
       table.integer('numero').notNull()
       table.string('complemento')
       table.string('data').notNull()
-      table.integer('idUsuario').defaultTo(0)
+      table.integer('idUsuario').defaultTo(null)
   })
 };
 
