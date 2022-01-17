@@ -88,13 +88,13 @@ if(carrinho) {
 
 
 const success = (req, res) => {
-    const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/success' : 'https://aglcompany.herokuapp.com/success'
-    res.redirect(url)
+    // const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/success' : 'https://aglcompany.herokuapp.com/success'
+    res.redirect('https://aglcompany.herokuapp.com/success')
 }
 
 const cancel = (req, res) => {
-    const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/cancel' : 'https://aglcompany.herokuapp.com/cancel'
-    res.redirect(url)
+    // const url = process.env.DB_ENV === 'development' ? 'http://localhost:4200/cancel' : 'https://aglcompany.herokuapp.com/cancel'
+    res.redirect('https://aglcompany.herokuapp.com/cancel')
 }
 
 
