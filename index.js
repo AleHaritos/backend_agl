@@ -6,6 +6,8 @@ const consign = require('consign')
 const app = express()
 app.db = database
 
+app.get('/', (req, res) => res.send('Hello Word'))
+
 app.use(cors())
 app.use(express.json())
 
