@@ -131,7 +131,7 @@ const getVendasByIdPedido = (req, res) => {
 
     if(id){
     app.db('vendas')
-        .select('id.produtos', 'vendas.tamanho', 'vendas.quantidade', 'produtos.nome', 'pedidos.data')
+        .select('produtos.id', 'vendas.tamanho', 'vendas.quantidade', 'produtos.nome', 'pedidos.data')
         .innerJoin('produtos', 'vendas.idProduto', '=', 'produtos.id')
         .innerJoin('pedidos', 'vendas.idPedido', '=', 'pedidos.id')
         .where({ idPedido: id })
