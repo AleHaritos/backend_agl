@@ -44,7 +44,21 @@ const getPedidosByIdUsuario = async (req, res) => {
 
     }           
 
+const whereLikeByDate = (req, res) => {
 
-return { cadastrarPedidos, getPedidos, getPedidosDesc, getPedidosByIdUsuario }
+    const year = req.params.year
+
+    if(year) {
+        app.db('pedidos')
+            .where('data', 'like', `%${year}%`)
+            .then(pedidos => res.json(pedidos))
+            .catch(e => res.status(500).send(e))
+    } else {
+        res.status(400).send('Ano não indicado')
+    }
+}
+
+
+return { cadastrarPedidos, getPedidos, getPedidosDesc, getPedidosByIdUsuario, whereLikeByDate }
 
 }

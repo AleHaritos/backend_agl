@@ -73,8 +73,9 @@ module.exports = app => {
         .post(app.api.pedidos.cadastrarPedidos)
         .get(app.api.pedidos.getPedidos)
 
-
     app.get('/pedidos-desc', app.api.pedidos.getPedidosDesc)
+
+    app.get('/pedidos-ano/:year', app.api.pedidos.whereLikeByDate)
 
     app.route('/usuario')
         .post(app.api.usuario.signUp)    
